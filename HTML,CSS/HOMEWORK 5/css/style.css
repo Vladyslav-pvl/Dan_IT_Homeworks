@@ -1,0 +1,314 @@
+html {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #171717;
+}
+
+.container {
+	font-family: "Lato", sans-serif;
+	width: 1460px;
+	margin: 0 auto;
+}
+
+/*header*/
+.header {
+	margin-top: 37px;
+	margin-bottom: 120px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .header-logo {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-decoration: none;
+}
+.header .header-right-wrap {
+	display: flex;
+}
+.header .header-tel-link {
+	text-decoration: none;
+}
+.header .header-tel {
+	display: block;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.45;
+	color: #fff;
+	margin-right: 38px;
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+.header .header-tel .colored {
+	color: #d6af76;
+}
+.header .button-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 24px;
+	border: 1px solid #e4b564;
+	cursor: pointer;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+.header .button-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+}
+.header .button-icon .icon {
+	width: 100%;
+}
+.header .button-text .text {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #e4b564;
+}
+
+/* section-networks */
+.section-network {
+	margin-bottom: 160px;
+}
+.section-network .network-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 0.8;
+	color: #fff;
+	margin-bottom: 40px;
+}
+.section-network .network-desc {
+	margin-bottom: 40px;
+	width: 1182px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.4;
+	color: #fff;
+}
+.section-network .network-content-wrap {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: minmax(468px, auto);
+	gap: 26px 34px;
+	grid-template-areas:
+		"item1 item1 item2 item2 item3 item3"
+		"item4 item4 item4 item5 item5 item5";
+}
+.section-network .network-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.section-network .network-content .content {
+	margin-right: 42px;
+	margin-left: 42px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	color: #fff;
+	text-align: center;
+}
+.section-network .item-1 {
+	grid-area: item1;
+	background-color: #634f2c;
+}
+.section-network .item-2 {
+	grid-area: item2;
+	background-color: #b4a385;
+}
+.section-network .item-3 {
+	grid-area: item3;
+	background-color: #e4b564;
+}
+.section-network .item-4 {
+	grid-area: item4;
+	background-color: #635a4a;
+}
+.section-network .item-5 {
+	grid-area: item5;
+	background-color: #b08c4d;
+}
+/* section-build */
+.section-build {
+	padding-bottom: 190px;
+}
+.section-build .build-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 0.8;
+	color: #fff;
+	margin-bottom: 94px;
+}
+
+.section-build .build-content-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.section-build .build-content {
+	width: 466px;
+}
+.section-build .build-content .type-of-car,
+.section-build .build-content .worker,
+.section-build .build-content .excavator,
+.section-build .build-content .excavator-worker,
+.section-build .build-content .place {
+	padding-top: 44px;
+	padding-left: 52px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.25;
+	color: #fff;
+}
+.section-build .build-content .type-of-car .colored {
+	display: block;
+	font-weight: 700;
+}
+.section-build .col-1 .type-of-car {
+	margin-bottom: 24px;
+	min-height: 312px;
+	background-color: #0e0e0e;
+}
+.section-build .col-1 .worker {
+	min-height: 560px;
+	background-color: #1f1f1f;
+}
+.section-build .col-2 .type-of-car {
+	margin-bottom: 32px;
+	min-height: 438px;
+	background-color: #242424;
+}
+.section-build .col-2 .excavator {
+	min-height: 404px;
+	color: #000000;
+	background-color: #e4b564;
+}
+.section-build .col-3 .excavator-worker {
+	margin-bottom: 26px;
+	min-height: 254px;
+	background-color: #1f1f1f;
+}
+.section-build .col-3 .type-of-car {
+	margin-bottom: 26px;
+	min-height: 312px;
+	background-color: #0e0e0e;
+}
+.section-build .col-3 .place {
+	min-height: 276px;
+	font-weight: 700;
+	background-color: #0a0909;
+}
+
+/* section-clients */
+.background-color-client {
+	width: 100%;
+	background-color: #0e0e0e;
+}
+.section-client {
+	padding-top: 160px;
+	margin-bottom: 238px;
+	background-color: #0e0e0e;
+}
+.section-client .client-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 60px;
+}
+.section-client .client-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 0.8;
+	color: #fff;
+}
+.section-client .client-button {
+	padding: 10px 40px;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #e4b564;
+	border: 1px solid #e4b564;
+}
+.section-client .client-content-wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(390px, auto);
+}
+.section-client .client-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.section-client .client-content .image-wrap {
+	width: 185px;
+}
+.section-client .client-content .image {
+	width: 100%;
+}
+.section-client .item-1 {
+	background-color: #634f2c;
+}
+.section-client .item-2 {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(232, 210, 171, 0.76);
+}
+.section-client .item-2 .image-wrap-top {
+	margin-bottom: 2px;
+	width: 62px;
+}
+.section-client .item-2 .image-wrap-middle {
+	margin-bottom: 16px;
+	width: 138px;
+}
+.section-client .item-2 .image-wrap-bottom {
+	width: 24px;
+}
+.section-client .item-2 .image {
+	width: 100%;
+}
+.section-client .item-2 .text {
+	margin-bottom: 12px;
+	max-width: 326px;
+	min-height: 140px;
+	text-align: center;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.3;
+}
+.section-client .item-2 .text .bold {
+	font-weight: 700;
+}
+.section-client .item-3 {
+	background-color: #e4b564;
+}
+.section-client .item-4 {
+	background-color: #635a4a;
+}
+.section-client .item-5 {
+	background-color: #b08c4d;
+}
+.section-client .item-5 .image-wrap {
+	width: 118px;
+}
+.section-client .item-5 .image {
+	width: 100%;
+}
+.section-client .item-6 {
+	background-color: #634f2c;
+}
