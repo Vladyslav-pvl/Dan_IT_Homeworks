@@ -7,6 +7,9 @@ body {
 img {
 	max-width: 100%;
 }
+a {
+	text-decoration: none;
+}
 *,
 *:before,
 *:after {
@@ -14,172 +17,177 @@ img {
 }
 
 .wrapper {
-	background-image: url("../img/background.png");
+	background-image: url(../img/background.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	height: 100vh;
+	background-attachment: fixed;
+	min-height: 100vh;
 }
 
 .container {
+	font-family: "Roboto", sans-serif;
 	width: 1028px;
 	margin: 0 auto;
-	font-family: "Roboto", sans-serif;
 }
-/*header*/
+
+/* header */
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding-top: 50px;
+	padding-top: 46px;
 	margin-bottom: 16px;
-	min-height: 60px;
 }
-.header .header-logo {
+.header .header-left {
 	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: #fff;
+	/* align-items: center;    (-+без него) */
 }
-.header .header-logo:hover,
-.header .header-logo:focus {
+.header .header-left:hover .logo-icon,
+.header .header-left:focus .logo-icon {
+	background-image: url("../img/logo2.png");
+}
+.header .header-left:hover .text-up,
+.header .header-left:focus .text-up,
+.header .header-left:hover .text-down,
+.header .header-left:focus .text-down {
 	color: #f26522;
 }
-
-.header .header-logo .logo {
+.header .header-left .logo-icon {
+	margin-right: 8px;
+	background-image: url("../img/logo.png");
 	width: 52px;
 	height: 46px;
-	margin-right: 8px;
-	background-image: url(../img/logo.png);
 }
-.header .header-logo:hover .logo,
-.header .header-logo:focus .logo {
-	background-image: url(../img/logo2.png);
-}
-.header .logo-text {
+.header .header-left .logo-text-wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
-.header .logo-text-top {
+.header .logo-text-wrap .text-up {
+	margin-bottom: 2px; /*6px + align-items:center, (-+без него) */
 	font-weight: 700;
 	font-size: 29px;
 	line-height: 1;
+	color: #fff;
 	text-transform: uppercase;
 }
-.header .logo-text-bottom {
-	padding-top: 5px;
-	vertical-align: text-bottom;
+.header .logo-text-wrap .text-down {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 1;
+	color: #fff;
 	text-transform: uppercase;
 }
-.header .header-contact {
+
+.header .header-right {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: end;
 }
-.header .header-contact .mail,
-.header .header-contact .tel {
+.header .header-right .header-mail,
+.header .header-right .header-tel {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 1;
 	color: #fff;
-	text-decoration: none;
 }
-.header .header-contact .tel {
-	text-align: end;
-}
-.header .header-contact .mail:hover,
-.header .header-contact .tel:hover,
-.header .header-contact .mail:focus,
-.header .header-contact .tel:focus {
+.header .header-right .header-mail:hover,
+.header .header-right .header-tel:hover,
+.header .header-right .header-mail:focus,
+.header .header-right .header-tel:focus {
 	color: #f26522;
-}
-/*main*/
-.content {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-content: space-between;
-	row-gap: 36px;
-	column-gap: 64px;
-	margin-bottom: 35px;
 }
 
-.content .box:hover .desc,
-.content .box:focus .desc {
+/* section-services */
+.section-services {
+	margin-bottom: 48px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 36px 62px;
+}
+.section-services .box {
+	color: #fff;
+	text-align: center;
+}
+.section-services .box:hover .desc,
+.section-services .box:focus .desc {
 	color: #f26522;
 }
-.content .box .image-wrap {
-	display: block;
+.section-services .box .image-wrap {
+	position: relative;
+	margin-bottom: 20px;
 	width: 300px;
 	height: 220px;
-	box-sizing: border-box;
-	border: 3px solid #000;
-	border-image: linear-gradient(to top, #fff, #000) 1;
-	position: relative;
 	overflow: hidden;
+	border-left: 3px solid #000;
+	border-right: 3px solid #000;
+	border-image: linear-gradient(to bottom, #fff, #000) 1;
 }
-.content .image-wrap .image {
+.section-services .box:hover .image-wrap {
+	border-image: linear-gradient(to bottom, #f26522, #000) 1;
+}
+.section-services .image-wrap .image {
+	display: block;
 	width: 100%;
+	height: 100%;
 }
-.content .box .inner-wrap {
-	padding: 6px 16px 12px;
+.section-services .inner {
 	position: absolute;
-	top: 100%;
-	right: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 6px 14px 12px 16px;
 	left: 0;
-	transition: 0.6s ease-in-out;
+	right: 0;
+	top: 100%;
 	background-color: #f26522;
-	color: #fff;
+	transition: 0.7s;
 }
-.content .box:hover .inner-wrap {
-	top: 74%;
+.section-services .box:hover .inner {
+	top: calc(220px - 62px); /** height(img - inner) **/
 }
-.content .inner .text-top {
+.section-services .inner .top-text-wrap {
 	margin-bottom: 8px;
-	text-decoration: none;
+	text-align: start;
+}
+.section-services .inner .top-text {
 	font-weight: 400;
 	font-size: 10px;
 	line-height: 1;
 }
-.content .text-bottom-wrap {
+.section-services .inner .bottom-text-wrap {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.content .text-bottom-right::after {
-	content: url(../img/bracket_inner.svg);
-	padding-left: 16px;
-}
-.content .text-bottom-wrap .text-bottom-left {
+.section-services .bottom-text-wrap .left-text {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 1;
 }
-.content .text-bottom-right {
+.section-services .bottom-text-wrap .right-text {
+	text-decoration: none;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1;
-}
-.content .box .wrap-desc {
-	padding-top: 20px;
-	text-align: center;
-}
-.content .box .desc {
-	text-decoration: none;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.2;
 	color: #fff;
 }
-/*footer*/
-.footer {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	text-align: center;
+.section-services .bottom-text-wrap .right-text::after {
+	content: url("../img/bracket_inner.svg");
+	margin-left: 16px;
+	/* height? */
 }
-.footer .text {
+.section-services .box .desc {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1;
+}
+
+/* footer */
+.footer {
+	margin-bottom: 14px;
+}
+.footer .footer-text {
+	text-align: center;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 1;

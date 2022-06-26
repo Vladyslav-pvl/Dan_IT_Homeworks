@@ -33,11 +33,11 @@ a { text-decoration: none; }
 	letter-spacing: 2.7px;
 }
 
-.section-photo .content {
+.section-content .content {
 	margin: 48px 66px 42px;
 }
 
-.section-photo .content .title {
+.section-content .content .title {
 	margin-bottom: 38px;
 	font-weight: 700;
 	font-size: 22px;
@@ -46,7 +46,7 @@ a { text-decoration: none; }
 	text-transform: uppercase;
 }
 
-.section-photo .content .desc {
+.section-content .content .desc {
 	margin-bottom: 28px;
 	font-weight: 400;
 	font-size: 16px;
@@ -54,11 +54,11 @@ a { text-decoration: none; }
 	letter-spacing: 2.4px;
 }
 
-.section-photo .content .desc + .desc {
+.section-content .content .desc + .desc {
 	margin-bottom: 66px;
 }
 
-.section-photo .content .button {
+.section-content .content .button {
 	padding: 18px 42px;
 	background-color:#FF0000;
 	color: #FFF;
