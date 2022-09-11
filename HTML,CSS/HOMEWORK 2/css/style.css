@@ -1,8 +1,24 @@
-html  { box-sizing: border-box;}
-body { margin: 0 }
-img { max-width: 100% }
-a { text-decoration: none; }
-*,*:before,*:after { box-sizing: inherit; }
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0
+}
+
+img {
+	max-width: 100%
+}
+
+a {
+	text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
 .container {
 	font-family: 'Montserrat', sans-serif;
@@ -24,10 +40,10 @@ a { text-decoration: none; }
 }
 
 .header .menu-link {
-	color:#FF0000;
+	color: #FF0000;
 	text-decoration: none;
 	font-weight: 700;
-	font-size: 18px;	
+	font-size: 18px;
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 2.7px;
@@ -54,13 +70,13 @@ a { text-decoration: none; }
 	letter-spacing: 2.4px;
 }
 
-.section-content .content .desc + .desc {
+.section-content .content .desc+.desc {
 	margin-bottom: 66px;
 }
 
 .section-content .content .button {
 	padding: 18px 42px;
-	background-color:#FF0000;
+	background-color: #FF0000;
 	color: #FFF;
 	font-weight: 700;
 	font-size: 12px;
