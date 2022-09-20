@@ -1,0 +1,27 @@
+// "use strict"
+
+// let userFirstNumber = prompt("Type your first number");
+// while (isNaN(userFirstNumber) || userFirstNumber == null || userFirstNumber == "") {
+// 	userFirstNumber = prompt("Type your first number!");
+// }
+// let userSecondNumber = prompt("Type your seconf number");
+// while (isNaN(userSecondNumber) || userSecondNumber == null || userSecondNumber == "") {
+// 	userSecondNumber = prompt("Type your second number!!");
+// }
+// let userOperation = prompt("Type here operation that you need to do")
+// while (userOperation !== "+" && userOperation != "-" && userOperation != "/" && userOperation != "*" || userOperation == null || userOperation == "") {
+// 	userOperation = prompt("Type here operation that you need to do! (+ - * /)");
+// }
+// function userResult() {
+// 	if (userOperation == "+") {
+// 		return +userFirstNumber + +userSecondNumber;
+// 	} else if (userOperation == "-") {
+// 		return userFirstNumber - userSecondNumber;
+// 	} else if (userOperation == "*") {
+// 		return userFirstNumber * userSecondNumber;
+// 	} else {
+// 		return userFirstNumber / userSecondNumber;
+// 	}
+// }
+// const result = userResult();
+// console.log(result);

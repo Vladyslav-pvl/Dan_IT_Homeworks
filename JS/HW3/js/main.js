@@ -24,9 +24,8 @@
 ####Необязательное задание продвинутой сложности:
 - Проверить, что введенное значение является целым числом. Если данное условие не соблюдается, повторять вывод окна на экран до тех пор, пока не будет введено целое число.
 - Считать два числа, `m` и `n`. Вывести в консоль все простые числа (http://ru.math.wikia.com/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE) в диапазоне от `m` до `n` (меньшее из введенных чисел будет `m`, бОльшее будет `n`). Если хотя бы одно из чисел не соблюдает условие валидации, указанное выше, вывести сообщение об ошибке, и спросить оба числа заново.
-
-
 */
+
 
 // let userNumb = prompt('Enter the number');
 
@@ -53,12 +52,37 @@ while (m > n) {
 }
 
 for (let i = m; i <= n; i++) {
-	count = 0;
+	let count = 0;
 	for (let k = 2; k <= i; k++) {
 		if (i % k === 0)
 			count = count + 1;
 	}
-	if (count == 1) {
+	if (count === 1) {
 		console.log('prime:', i);
 	}
 }
+
+//or
+/* let m = +prompt("Enter the first number for the addition task please");
+let n = +prompt("Enter the second number for the additional task please");
+
+while (m > n) {
+  alert("Error! Try again");
+  m = +prompt("Enter the first number for the addition task Again!");
+  n = +prompt("Enter the second number for the additional task Again!");
+}
+
+for (let i = m; i <= n; i++) {
+  let count = 0;
+
+  for (let k = 2; k < i; k++) {
+    if (i % k === 0) {
+      count = count + 1;
+      break;
+    }
+  }
+
+  if (count === 0) {
+    console.log("prime:", i);
+  }
+} */
