@@ -1,41 +1,27 @@
 /*1. Опишите своими словами, что такое метод обьекта
 	Метод обьекта - это ф-ция хранящиеся в виде свойста обьекта.
+
 2. Каким типом данных является значение свойства объекта?
 	Значение свойства обьекта может состоять из любого примитивного типа данных или того же обьекта
+
 3. Объект это ссылочный тип данных. Что означает это понятие?
 	В js есть примитивные типы данных и ссылочные (Обьекты включающие object, array и function). Эти типы могут содержать очень большие обьемы данных, и переменная содержащая ссылочный тип, фактически, его значение не имеет. Она сдержит ссылку на место в памяти, где размещаются реальные данные. 
 */
+let nameUser = prompt('Enter your name, please!');
+let lastNameUser = prompt('Enter your last name, please!');
 
-
-/*## Задание
-Реализовать функцию для создания объекта "пользователь". Задача должна быть реализована на языке javascript, без использования фреймворков и сторонник библиотек (типа Jquery).
-
-#### Технические требования:
-- Написать функцию `createNewUser()`, которая будет создавать и возвращать объект `newUser`.
-- При вызове функция должна спросить у вызывающего имя и фамилию.
-- Используя данные, введенные пользователем, создать объект `newUser` со свойствами `firstName` и `lastName`.
-- Добавить в объект `newUser` метод `getLogin()`, который будет возвращать первую букву имени пользователя, соединенную с фамилией пользователя, все в нижнем регистре (например, `Ivan Kravchenko → ikravchenko`).
-- Создать пользователя с помощью функции `createNewUser()`. Вызвать у пользователя функцию `getLogin()`. Вывести в консоль результат выполнения функции.
-
-#### Необязательное задание продвинутой сложности:
-- Сделать так, чтобы свойства `firstName` и `lastName` нельзя было изменять напрямую. Создать функции-сеттеры `setFirstName()` и `setLastName()`, которые позволят изменить данные свойства.*/
-
-function createNewUser() {
-	let name1 = prompt('What is you name?');
-	let name2 = prompt('What is your last name?');
-
-	function getUser() {
-		return (newUser.firstName[0] + name2).toLowerCase();
-	}
+function createNewUser(name1, name2) {
 
 	let newUser = {
 		firstName: name1,
-		secondName: name2,
+		lastName: name2,
+		getLogin() {
+			console.log((this.firstName[0] + this.lastName).toLowerCase());
+		}
 	};
-	newUser.login = getUser();
 
-	console.log(newUser);
-	console.log(typeof newUser.firstName);
+	newUser.getLogin();
 	return newUser;
 }
-createNewUser();
+console.log(createNewUser(nameUser, lastNameUser));
+
