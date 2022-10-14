@@ -10,19 +10,10 @@ let arrUser = ['hello', 'world', 23, '23', null];
 let typeUser = 'string';
 
 function filterBy(arr, type) {
-	let newArr = [3];
-	// console.log(newArr[newArr.length - 1]);
-	for (let i = 0; i < arr.length; i++) {
-		if (type === 'string' && typeof arr[i] === 'string') {
-			newArr[newArr.length] = arr[i];
-		} else if (type === 'number' && typeof arr[i] === 'number') {
-			newArr[newArr.length] = arr[i];
-		} else if (type === 'boolean' && typeof arr[i] === 'boolean') {
-			newArr[newArr.length] = arr[i];
-		} else if (type === 'object' && typeof arr[i] === 'object') {
-			newArr[newArr.length] = arr[i];
-		} else {
-			newArr[newArr.length] = arr[i];
+	let newArr = [];
+	for (let key in arr) {
+		if (typeof arr[key] === type) {
+			newArr.push(arr[key]);
 		}
 	}
 	return newArr;
