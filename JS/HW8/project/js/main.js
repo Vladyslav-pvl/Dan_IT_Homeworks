@@ -22,6 +22,11 @@ function optionsList() {
 	console.log('optionList_parent :', optionsList_parent);
 	let optionsList_children = optionsList.childNodes;
 	console.log('optionList_children :', optionsList_children);
+	let nodeType = [];
+	for (let node of optionsList_children) {
+		nodeType += node.nodeType + ' ';
+	}
+	console.log('optionList_children nodeType :', nodeType);
 }
 optionsList();
 
