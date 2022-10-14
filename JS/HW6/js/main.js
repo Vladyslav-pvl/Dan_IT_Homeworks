@@ -8,8 +8,8 @@
 
 let nameUser = prompt('Enter your name, please!');
 let lastNameUser = prompt('Enter your last name, please!');
-let dateOfBirth = prompt('Enter your date of birth in format: yyyy.mm.dd');
-
+let dateOfBirth = prompt('Enter your date of birth in format: dd.mm.yyyy');
+let dateOfBirthReverse = dateOfBirth.split('.').reverse().join('.');
 
 function createNewUser(name1, name2, birthday) {
 	let DayOfBirth = birthday.slice(8, 10);
@@ -43,5 +43,5 @@ function createNewUser(name1, name2, birthday) {
 	console.log('getPassword :', newUser.getPassword());
 	return newUser;
 }
-console.log(createNewUser(nameUser, lastNameUser, dateOfBirth));
+console.log(createNewUser(nameUser, lastNameUser, dateOfBirthReverse));
 
