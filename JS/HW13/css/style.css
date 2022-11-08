@@ -1,0 +1,23 @@
+.img-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.img {
+    width: 500px;
+}
+
+.btn {
+
+    text-align: center;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
