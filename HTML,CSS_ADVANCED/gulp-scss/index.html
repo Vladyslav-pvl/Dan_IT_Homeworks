@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gulp-scss</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style/styles.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header container">
+            <div class="header__btn">
+                <div class="header__btn__line line1"></div>
+                <div class="header__btn__line line2"></div>
+                <div class="header__btn__line line3"></div>
+            </div>
+            <nav class="header__nav disactive">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="#">home</a></li>
+                    <li class="header__item"><a class="header__link" href="#">about us</a></li>
+                    <li class="header__item"><a class="header__link" href="#">our journal</a></li>
+                    <li class="header__item"><a class="header__link" href="#">projects</a></li>
+                    <li class="header__item"><a class="header__link" href="#">news</a></li>
+                    <li class="header__item"><a class="header__link" href="#">features</a></li>
+                    <li class="header__item"><a class="header__link" href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="image-wrap container">
+                <img class="image" src="./dist/img/img1.png" alt="railway">
+            </section>
+            <section class="posts container">
+                <h2 class="posts__title">- our recent posts</h2>
+                <div class="content-wrap">
+                    <div class="content kettle">
+                        <div class="content__image-wrap">
+                            <img class="content__image" src="./dist/img/img2.png" alt="kettle">
+                        </div>
+                        <div class="content__desc">
+                            <p class="content__desc__title">Aenean Adipiscing Etiam Vestibulum</p>
+                            <p class="content__desc__comment">Photography, Journal / 9 Comments</p>
+                            <p class="content__desc__text disactive">Etiam porta sem malesuada euismod. Aenean
+                                leoquam. <br> Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+                    <div class="content street">
+                        <div class="content__image-wrap">
+                            <img class="content__image" src="./dist/img/img3.png" alt="street">
+                        </div>
+                        <div class="content__desc">
+                            <p class="content__desc__title">Aenean Adipiscing Etiam Vestibulum</p>
+                            <p class="content__desc__comment">Photography, Journal / 9 Comments</p>
+                            <p class="content__desc__text disactive">Etiam porta sem malesuada euismod. Aenean
+                                leoquam. <br> Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+                    <div class="content kitchen">
+                        <div class="content__image-wrap">
+                            <img class="content__image" src="./dist/img/img4.png" alt="kitchen">
+                        </div>
+                        <div class="content__desc">
+                            <p class="content__desc__title">Aenean Adipiscing Etiam Vestibulum</p>
+                            <p class="content__desc__comment">Photography, Journal / 9 Comments</p>
+                            <p class="content__desc__text disactive">Etiam porta sem malesuada euismod. Aenean
+                                leoquam. <br> Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+                    <div class="content flower disactive">
+                        <div class="content__image-wrap">
+                            <img class="content__image" src="./dist/img/img5.png" alt="flower">
+                        </div>
+                        <div class="content__desc">
+                            <p class="content__desc__title">Aenean Adipiscing Etiam Vestibulum</p>
+                            <p class="content__desc__comment">Photography, Journal / 9 Comments</p>
+                            <p class="content__desc__text disactive">Etiam porta sem malesuada euismod. Aenean
+                                leoquam. <br> Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="instagram container">
+                <p class="instagram__title">- last instagram shot</p>
+                <div class="instagram__img-wrap">
+                    <img class="instagram__img" src="./dist/img/img6.png" alt="bicycle">
+                </div>
+            </section>
+            <section class="latest-instagram disactive">
+                <div class="latest-instagram__title-wrap">
+                    <span class="latest-instagram__left-title">- latest instagram shots</span>
+                    <span class="latest-instagram__right-title">go to our instagram page -</span>
+                </div>
+                <div class="latest-instagram__imgs">
+                    <div class="latest-instagram__img-wrap"><img class="latest-instagram__img" src="./dist/img/img6.png"
+                            alt="bicycle"></div>
+                    <div class="latest-instagram__img-wrap"><img class="latest-instagram__img" src="./dist/img/img7.png"
+                            alt="bicycle"></div>
+                    <div class="latest-instagram__img-wrap"><img class="latest-instagram__img" src="./dist/img/img8.png"
+                            alt="bicycle"></div>
+                    <div class="latest-instagram__img-wrap disactive"><img class="latest-instagram__img"
+                            src="./dist/img/img9.png" alt="bicycle"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__title">- get in touch with us -</p>
+            <p class="footer__desc-phone">Maecenas faucibus molli interdum. Cras mattis consectetur purus sitor amet sed
+                donec malesuada ullamcorper odio.</p>
+            <p class="footer__desc-lap disactive">Maecenas faucibus molli interdum. Cras mattis consectetur purus
+                sitor amet sed donec malesuada ullamcorper odio. Curabitur blandit tempus porttitor vollisky inceptos
+                mollisestor.</p>
+            <div class="footer__icons">
+                <div class="footer__icon-wrap">
+                    <a href="#"><img class="footer__icon" src="./dist/img/rss.svg" alt="rss"></a>
+                </div>
+                <div class="footer__icon-wrap">
+                    <a href="#"><img class="footer__icon" src="./dist/img/facebook.svg" alt="facebook"></a>
+                </div>
+                <div class="footer__icon-wrap">
+                    <a href="#"><img class="footer__icon" src="./dist/img/twitter.svg" alt="twitter"></a>
+                </div>
+                <div class="footer__icon-wrap">
+                    <a href="#"><img class="footer__icon" src="./dist/img/dribbble.svg" alt="dribble"></a>
+                </div>
+                <div class="footer__icon-wrap">
+                    <a href="#"><img class="footer__icon" src="./dist/img/pinterest.svg" alt="pinterest"></a>
+                </div>
+            </div>
+            <div class="footer__info">
+                <p class="footer__info__city">Moonshine St. 14-05 Light City&ensp;/</p>
+                <p class="footer__info__phone">T. +00 (123) 456 78 90&ensp;/</p>
+                <p class="footer__info__mail">first.last@email.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./dist/js/scripts.min.js"></script>
+</body>
+
+</html>

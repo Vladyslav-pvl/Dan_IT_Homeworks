@@ -1,0 +1,552 @@
+// @use "sass:map";
+@import "variables";
+@import "mixins";
+
+.disactive {
+    display: none;
+}
+
+.active1 {
+    position: relative;
+    transform: rotate(45deg);
+    top: 2px;
+}
+
+.active2 {
+    position: relative;
+    transform: rotate(-45deg);
+    bottom: 2px;
+}
+
+.hide-line {
+    display: none;
+}
+
+.wrapper {
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    color: $primary-color;
+    font-size: $primary-size;
+}
+
+.container {
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 36px;
+        background-color: #000;
+
+        &__line {
+            width: 18px;
+            height: 2px;
+            margin-bottom: 2px;
+            background-color: #fff;
+        }
+
+        &__line:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        right: 25px;
+        top: 100%;
+        width: 182px;
+        background-color: #F5F5F5;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    &__item {
+        padding-left: 12px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    &__item:hover,
+    &__item:focus {
+        background-color: #E5E5E5;
+    }
+
+    &__item:hover &__link,
+    &__item:focus &__link {
+        color: rgba(87, 164, 164, 1);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgba(78, 78, 78, 1);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+.image-wrap {
+    max-width: 1170px;
+    margin-bottom: 38px;
+}
+
+.image {
+    width: 100%;
+}
+
+.posts__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: rgba(78, 78, 78, 1);
+}
+
+.content-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.content {
+    margin-bottom: 28px;
+
+    &__image-wrap {
+        box-sizing: border-box;
+        width: 160px;
+        height: 140px;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__desc {
+        padding-top: 10px;
+
+        &__title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 2.2;
+            color: rgba(78, 78, 78, 1);
+        }
+
+        &__comment {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 1.6;
+            color: rgba(124, 124, 124, 1);
+        }
+    }
+}
+
+.instagram {
+    margin-bottom: 42px;
+
+    &__title {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(78, 78, 78, 1);
+        text-transform: uppercase;
+    }
+
+    &__img-wrap {
+        width: 248px;
+        height: 248px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.footer {
+    padding: 38px 34px 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+
+    &__title {
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.6;
+        text-transform: uppercase;
+        color: rgba(254, 254, 254, 1);
+    }
+
+    &__desc-phone {
+        margin-bottom: 26px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.6;
+        color: rgba(185, 185, 185, 1);
+        text-align: center;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 24px;
+    }
+
+    &__icon-wrap {
+        margin-right: 6px;
+        width: 34px;
+        height: 34px;
+    }
+
+    &__icon-wrap:last-of-type {
+        margin-right: 0;
+    }
+
+    &__icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__city,
+        &__phone,
+        &__mail {
+            margin-right: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.6;
+            color: rgba(185, 185, 185, 1);
+        }
+    }
+}
+
+// @include for-tablet-only {
+//     .header {
+//         background-color: #000;
+//     }
+// }
+
+@media (min-width:768px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header {
+        display: block;
+        flex-direction: row;
+        justify-content: inherit;
+        position: relative;
+
+        &__btn {
+            display: none;
+        }
+
+        &__nav {
+            display: block;
+            position: relative;
+            right: auto;
+            top: auto;
+            width: auto;
+            background-color: #fff;
+        }
+
+        &__list {
+            flex-direction: row;
+            justify-content: center;
+            padding: 0;
+        }
+
+        &__item {
+            margin-right: 18px; // ???
+            padding: 0;
+            cursor: auto;
+        }
+
+        &__item:last-of-type {
+            margin-right: 0;
+        }
+
+        &__item:hover,
+        // как от этого избавится? как обнулить?
+        &__item:focus {
+            background-color: #fff;
+        }
+    }
+
+    .image-wrap {
+        margin-bottom: 56px;
+    }
+
+    .posts {
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+
+    .posts__title {
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .content-wrap {
+        margin-bottom: 60px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        // justify-content: center;
+        margin-bottom: 32px;
+
+        &__image-wrap {
+            margin-right: 20px;
+        }
+
+        &__desc {
+            padding-top: 0;
+
+            &__title {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            &__text {
+                display: block;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    .content:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .instagram {
+        display: none;
+    }
+
+    .latest-instagram {
+        display: block;
+        padding: 46px 80px 50px;
+        background-color: rgba(245, 245, 245, 1);
+        max-width: 1250px;
+        margin: 0 auto;
+
+
+
+        &__title-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 34px;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        &__left-title {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        &__right-title {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        &__left-title,
+        &__right-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: rgba(78, 78, 78, 1);
+        }
+
+        &__imgs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__img-wrap {
+            margin-right: 8px;
+            max-width: 1170px;
+            // width: 250px;
+            width: 32%;
+            // height: 250px;
+        }
+
+        &__img-wrap:last-of-type {
+            margin-right: 0;
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .footer {
+        padding: 56px 120px 56px;
+        margin: 0 auto;
+        max-width: 1170px;
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        &__desc-phone {
+            display: none;
+        }
+
+        &__desc-lap {
+            display: block;
+            margin-bottom: 36px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: center;
+            color: rgba(185, 185, 185, 1);
+        }
+
+        &__icons {
+            margin-bottom: 36px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .header {
+        margin-top: 44px;
+        margin-bottom: 50px;
+
+        &__item {
+            margin-right: 34px; // ???
+        }
+
+    }
+
+    .image-wrap {
+        margin-bottom: 66px;
+    }
+
+    .content {
+        justify-content: center;
+    }
+
+    .content-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'item1 item2'
+            'item3 item4';
+        column-gap: 24px;
+        margin-bottom: 68px;
+    }
+
+    .kettle {
+        grid-area: item1;
+    }
+
+    .kitchen {
+        grid-area: item2;
+    }
+
+    .street {
+        grid-area: item3;
+    }
+
+    .flower {
+        grid-area: item4;
+    }
+
+    .content.street {
+        margin-bottom: 0;
+    }
+
+    .latest-instagram {
+
+        &__img-wrap {
+            max-width: 1170px;
+            width: 22.8%;
+        }
+
+        &__img-wrap:last-of-type {
+            display: block;
+        }
+    }
+
+    .footer {
+        padding-top: 66px;
+        padding-right: auto;
+        padding-left: auto;
+        padding-bottom: 70px;
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        &__desc-phone {
+            display: none;
+        }
+
+        &__desc-lap {
+            display: block;
+            margin-bottom: 36px;
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: center;
+            color: rgba(185, 185, 185, 1);
+        }
+
+        &__icons {
+            margin-bottom: 36px;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
