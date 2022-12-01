@@ -1,0 +1,13 @@
+@use "sass:map";
+
+@mixin for-tablet-only {
+    @media screen and (min-width: map.get($breakpoints, "tab_start")) {
+        @content;
+    }
+}
+
+@mixin for-desktop-only {
+    @media screen and (min-width: map.get($breakpoints, "desc_start")) {
+        @content;
+    }
+}
