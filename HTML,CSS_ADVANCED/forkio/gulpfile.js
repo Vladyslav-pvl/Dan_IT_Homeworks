@@ -56,6 +56,5 @@ gulp.task('serve', function () {
   gulp.watch('./**/*').on('change', reload);
 });
 
-exports.start = gulp.parallel('prepare-img', 'prepare-css', 'prepare-js');
 exports.build = gulp.series('clean', gulp.parallel('prepare-img', 'prepare-css', 'prepare-js'));
 exports.dev = gulp.series('serve');
