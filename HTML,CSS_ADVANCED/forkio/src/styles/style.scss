@@ -44,6 +44,18 @@
     margin-bottom: 50px;
     background-color: rgba(39, 38, 42, 1);
 
+    &__logo-wrap {
+        text-decoration: none;
+    }
+
+    &__logo-wrap:hover &__logo {
+        background-image: url(../img/logo_pen_hover.svg);
+    }
+
+    &__logo-wrap:hover &__title__text {
+        color: #fff;
+    }
+
     &__logo {
         background-image: url(../img/logo_pen.svg);
         background-size: cover;
@@ -51,11 +63,6 @@
         background-position: center center;
         width: 44px;
         height: 42px;
-    }
-
-    &__logo:hover,
-    &__logo:focus {
-        background-image: url(../img/logo_pen_hover.svg);
     }
 
     &__link {
@@ -71,11 +78,6 @@
             background-color: $primary-color;
         }
 
-        &__text:hover,
-        &__text:focus {
-            background-color: #fff;
-            color: $primary-color;
-        }
     }
 
     &__btn {
@@ -330,7 +332,7 @@
     &__line {
         max-width: 780px;
         height: 2px;
-        margin-bottom: 40px; // потом убрать!!!
+        margin-bottom: 30px;
         margin-left: 28px;
         margin-right: 28px;
         background-color: rgba(100, 87, 102, 1);

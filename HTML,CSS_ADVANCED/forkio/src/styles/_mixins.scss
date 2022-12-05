@@ -1,5 +1,12 @@
 @use "sass:map";
 
+@mixin centr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 @mixin for-tablet-only {
     @media screen and (min-width: map.get($breakpoints, "tab_start")) {
         @content;
@@ -8,6 +15,17 @@
 
 @mixin for-desktop-only {
     @media screen and (min-width: map.get($breakpoints, "desc_start")) {
+        @content;
+    }
+}
+
+@mixin for-tablet-fork {
+    @media screen and (min-width: 636px) {
+        @content;
+    }
+}
+@mixin for-desktop-fork {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }
